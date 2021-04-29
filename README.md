@@ -70,5 +70,5 @@ Twitterなどのインフルエンサーであるアカウントと紐づける�
 - belongs_to :user
 - belongs_to :prototype
 
-開発メモ
-2021-4-29 デブロイ、Basic認証導入
+開発メモ  
+- 2021-4-29 デブロイ、Basic認証導入
