@@ -4,6 +4,8 @@ class Prototype < ApplicationRecord
   belongs_to :platform
   belongs_to :publish
 
+  has_one_attached :image
+
   with_options presence: true do
     validates :name
     validates :concept
