@@ -8,7 +8,7 @@
       </div>
     <% end %>
     <div class="card__wrapper">
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+      <%= render partial: 'prototype', collection: @prototype %>
     </div>
   </div>
 </main>
