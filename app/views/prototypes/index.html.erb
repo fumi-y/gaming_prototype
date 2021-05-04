@@ -1,6 +1,5 @@
 <main class="main">
   <div class="inner">
-  toppage
     <% if user_signed_in? %>
       <div class="greeting">
         こんにちは、
@@ -8,7 +7,20 @@
       </div>
     <% end %>
     <div class="card__wrapper">
-      <%= render partial: 'prototype', collection: @prototype %>
+      <% @prototype.each do |prototype| %>
+        <% if prototype.publish_id == 0 %>
+        <div class="card">
+          <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype) %>
+          <div class="card__body">
+            <%= link_to prototype.name, prototype_path(prototype), class: :card__title%>
+            <p class="card__summary">
+              <%= prototype.concept %>
+            </p>
+            <%= link_to "by #{prototype.user.nickname}", root_path, class: :card__user %>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </main>
