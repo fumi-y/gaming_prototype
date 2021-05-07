@@ -18,6 +18,11 @@ div {
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
+  background-color: #000000;            /* 背景色 */
+  background-image: url("white0001.png"); /* 画像 */
+  background-size: cover;               /* 全画面 */
+  background-attachment: fixed;         /* 固定 */
+  background-position: center center;   /* 縦横中央 */
 }
 
 li {
@@ -34,10 +39,11 @@ a {
   color: #3b4043;
 }
 
+
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
+  background-color: rgb(92, 92, 92);
   margin-bottom: 48px;
   padding: 20px 0;
 
@@ -52,29 +58,29 @@ a {
   justify-content: space-between;
 }
 .logo {
-  width: 200px;
+  width: 250px;
 }
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #4dcef5;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #4dcef5 solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #4dcef5;
 }
 
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #4dcef5;
   text-decoration: none;
   user-select: none;
 }
@@ -150,8 +156,16 @@ a {
   margin-bottom: 40px;
 }
 .card__img {
-  margin-bottom: 16px;
+  border: 10px #274663 solid;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
 }
+
+.card__img:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
 .card__title {
   display: block;
   font-size: 20px;
@@ -172,6 +186,7 @@ a {
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
+  color: #274663;
 }
 .prototype__hedding{
   font-size: 24px;
@@ -181,14 +196,14 @@ a {
 .prototype__user{
   display: block;
   font-size: 16px;
-  color: #999;
+  color: rgb(92, 92, 92);
   text-align: center;
   text-decoration: underline;
 }
 .prototype__image{
   width: 40%;
   margin: 0 auto;
-  padding: 16px 0;
+  border: 10px #274663 solid;
 }
 .prototype__detail{
   display: flex;
@@ -200,16 +215,22 @@ a {
   font-size: 20px;
   font-weight: bold;
 }
+
+.detail__message{
+  color: black;
+}
+
 .prototype__manage{
   display: flex;
   justify-content: center;
   padding-top: 16px;
+  padding-bottom: 16px;
 }
 .prototype__btn{
   display: block;
   padding: 0.4em 1.6em;
   font-size: 0.4em;
-  color: #999;
+  color: rgb(117, 117, 117);
   text-decoration: none;
   user-select: none;
   border: 1px #999 solid;
@@ -219,11 +240,11 @@ a {
 }
 .prototype__btn:hover{
   color: #fff;
-  background: #999;
+  background: rgb(117, 117, 117);
 }
 
 .prototype__comments{
-  background-color: #f6f6f6;
+  background-color: #292929;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
@@ -235,6 +256,7 @@ a {
 .comments_list{
   list-style-type: square;
   padding-bottom: 5px;
+  color: #fafafa;
 }
 
 .comment_user{
@@ -277,12 +299,12 @@ a {
 /* フッター */
 
 .footer {
-  background-color: #999;
+  background-color: rgb(92, 92, 92);
   padding: 10px 0;
 }
 .copyright {
   text-align: center;
-  color: #fff;
+  color: #4dcef5;
   font-size: 10px;
 }
 
