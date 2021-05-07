@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 // require("turbolinks").start() #ファイルの処理が正常に動作しない事があるため、コメントアウト中
 require("@rails/activestorage").start()
 require("channels")
+require("../comment")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

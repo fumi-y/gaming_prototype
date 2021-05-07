@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :profile, presence: true
 
   has_many :prototypes
+  has_many :comments, dependent: :destroy
 end
