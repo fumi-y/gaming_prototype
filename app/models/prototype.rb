@@ -15,6 +15,5 @@ class Prototype < ApplicationRecord
     validates :genre_id, numericality: { other_than: 0 } 
     validates :platform_id, numericality: { other_than: 0 } 
     validates :publish_id
-    validates :user_id
   end
 end
