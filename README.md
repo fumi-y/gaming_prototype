@@ -42,16 +42,16 @@ Twitterなどのインフルエンサーであるアカウントと紐づける�
 
 ### prototype テーブル
 
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| name        | string     | null: false                    |
-| concept     | string     | null: false                    |
-| text        | string     | null: false                    |
-| genre_id    | integer    | null: false                    |
-| platform_id | integer    | null: false                    |
-| publish_id  | integer    | null: false                    |
-| user        | references | null: false, foreign_key: true |
-| image       |            |                                |
+| Column      | Type       | Options           |
+| ----------- | ---------- | ----------------- |
+| name        | string     | null: false       |
+| concept     | string     | null: false       |
+| text        | string     | null: false       |
+| genre_id    | integer    | null: false       |
+| platform_id | integer    | null: false       |
+| publish_id  | integer    | null: false       |
+| user        | references | foreign_key: true |
+| image       |            |                   |
 
 #### Association
 - belongs_to :user
@@ -60,11 +60,11 @@ Twitterなどのインフルエンサーであるアカウントと紐づける�
 
 ### comment テーブル
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| text      | string     | null: false                    |
-| user      | references | null: false, foreign_key: true |
-| prototype | references | null: false, foreign_key: true |
+| Column    | Type       | Options           |
+| --------- | ---------- | ----------------- |
+| comment   | text       | null: false       |
+| user      | references | foreign_key: true |
+| prototype | references | foreign_key: true |
 
 #### Association
 - belongs_to :user
