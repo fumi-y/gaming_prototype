@@ -1,0 +1,40 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">NICKNAME</th>
+            <td class="table__col2"><%= @user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">PROFILE</th>
+            <td class="table__col2"><%= @user.profile %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんのプロトタイプ"%>
+      </h2>
+      <div class="user__card">
+      <% @user.prototypes.each do |prototype| %>
+        <% if prototype.publish_id == 0 %>
+        <div class="card">
+          <%= link_to image_tag(prototype.image, class: :card__img ), prototype_path(prototype) %>
+          <div class="card__body">
+            <%= link_to prototype.name, prototype_path(prototype), class: :card__title%>
+            <p class="card__summary">
+              <%= prototype.concept %>
+            </p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
