@@ -17,6 +17,10 @@
         <div class="actions">
           <%= f.submit "ログイン", class: :form__btn %>
         </div>
+
+        <div class="google_up">
+          <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
+        </div>
       <% end %>
     </div>
   </div>
