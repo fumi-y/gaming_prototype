@@ -34,7 +34,9 @@
           <%= f.submit "新規登録", class: :form__btn  %>
         </div>
 
-        <%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post%>
+        <div class="google_login">
+          <%= link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, method: :post%>
+        </div>
 
       <% end %>
     </div>
