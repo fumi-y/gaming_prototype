@@ -10,15 +10,24 @@
           <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>
         </div>
 
-        <div class="field">
-          <%= f.label :password, "Password（6文字以上）" %><br />
-          <%= f.password_field :password, id:"user_password", autocomplete: "new-password" %>
-        </div>
+        <%if @sns_id.present? %>
+          <%= hidden_field_tag :sns_auth, true %>
+        <% else %>
+        
+          <div class="field">
+            <%= f.label :password %>
+            <% @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <br />
+            <%= f.password_field :password, autocomplete: "new-password" %>
+          </div>
 
-        <div class="field">
-          <%= f.label :password_confirmation, "Password（再入力）" %><br />
-          <%= f.password_field :password_confirmation, id:"user_password_confirmation", autocomplete: "new-password" %>
-        </div>
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </div>
+
+        <% end %>
 
         <div class="field">
           <%= f.label :nickname, "NickName" %><br />
@@ -33,6 +42,11 @@
         <div class="actions">
           <%= f.submit "新規登録", class: :form__btn  %>
         </div>
+
+        <div class="google_in">
+          <%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post%>
+        </div>
+
       <% end %>
     </div>
   </div>
