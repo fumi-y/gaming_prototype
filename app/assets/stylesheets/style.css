@@ -136,6 +136,7 @@ a {
 
 .greeting{
   margin-bottom: 20px;
+  font-size: 25px;
 }
 .greeting__link{
   text-decoration: underline;
@@ -156,8 +157,9 @@ a {
   margin-bottom: 40px;
 }
 .card__img {
-  border: 10px #274663 solid;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  border: 10px #ffffff solid;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 1), 0 5px 5px 0 rgba(0, 0, 0, 0.5);
   transition: 0.2s ease;
 }
 
@@ -168,17 +170,17 @@ a {
 
 .card__title {
   display: block;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 8px;
   font-weight: bold;
 }
 .card__summary {
-  font-size: 16px;
+  font-size: 18px;
 }
 .card__user {
   display: block;
   font-size: 12px;
-  color: #999;
+  color: rgb(100, 100, 100);
   text-align: right;
   text-decoration: underline;
 }
@@ -186,7 +188,7 @@ a {
 /* 詳細ページ */
 .prototype__wrapper{
   min-height: calc(100vh - 161px);
-  color: #274663;
+  color: #202020;
 }
 .prototype__hedding{
   font-size: 24px;
@@ -203,7 +205,8 @@ a {
 .prototype__image{
   width: 40%;
   margin: 0 auto;
-  border: 10px #274663 solid;
+  border: 10px #ffffff solid;
+  border-radius: 15px;
 }
 .prototype__detail{
   display: flex;
@@ -217,7 +220,7 @@ a {
 }
 
 .detail__message{
-  color: black;
+  color: rgb(48, 48, 48);
 }
 
 .prototype__manage{
@@ -244,9 +247,15 @@ a {
 }
 
 .prototype__comments{
-  background-color: #292929;
+  background-color: #292929b7;
   padding: 20px;
   margin: 28px 0 40px 0;
+  border: 1px #999 solid;
+  border-radius: 65px;
+}
+
+.comment_label{
+  color: #ffffff;
 }
 
 .comments_lists{

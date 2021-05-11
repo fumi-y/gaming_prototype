@@ -33,7 +33,7 @@
         <%= form_with url:  "/prototypes/#{params[:prototype_id]}/comments", method: :post,id: "form" do |f| %>
         <%# <%= form_with model: [@prototype, @comment],local: true do |f|%> 
           <div class="field">
-            <%= f.label :comment, "コメント" %><br />
+            <%= f.label :comment, "コメント", class: :comment_label %><br />
             <%= f.text_field :comment, id:"comment_text" %>
           </div>
           <div class="actions">

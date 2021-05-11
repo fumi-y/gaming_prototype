@@ -19,13 +19,13 @@
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: :nav__logout %>
               <%= link_to "New Proto", new_prototype_path, class: :nav__btn %>
             </div>
           <% else %>
             <div class="nav__right">
-              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+              <%= link_to "Sign In", new_user_session_path, class: :nav__btn %>
+              <%= link_to "Sign Up", new_user_registration_path, class: :nav__btn %>
             </div>
           <% end %>
         </div>

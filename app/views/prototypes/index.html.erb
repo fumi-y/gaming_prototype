@@ -2,7 +2,7 @@
   <div class="inner">
     <% if user_signed_in? %>
       <div class="greeting">
-        こんにちは、
+        こんにちは,<br>
         <%= link_to current_user.nickname, root_path, class: :greeting__link%>さん
       </div>
     <% end %>
