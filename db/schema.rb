@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_05_13_022331) do
   end
 
   create_table "favos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "iine_id", null: false
     t.bigint "user_id"
     t.bigint "prototype_id"
     t.datetime "created_at", precision: 6, null: false
