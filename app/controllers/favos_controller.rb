@@ -1,5 +1,6 @@
 class FavosController < ApplicationController
   def index
+    @favos = Favo.includes(:prototype)
   end
 
   def create
@@ -7,10 +8,6 @@ class FavosController < ApplicationController
     if @favo.save
       redirect_to prototype_path(params[:prototype_id])
     end
-  end
-
-  def show
-    @favos = Favo.includes(:prototype)
   end
 
   private
