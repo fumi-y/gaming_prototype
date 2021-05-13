@@ -9,6 +9,10 @@ class FavosController < ApplicationController
     end
   end
 
+  def show
+    @favos = Favo.includes(:prototype)
+  end
+
   private
   def favo_params
     params.require(:favo).permit(:iine_id).merge(user_id: current_user.id, prototype_id: params[:prototype_id])
