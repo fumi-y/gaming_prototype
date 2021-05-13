@@ -1,7 +1,7 @@
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">ユーザー新規登録</h2>
+      <h2 class="page-heading">New User Sign Up</h2>
 
         <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
 
@@ -40,11 +40,11 @@
         </div>
 
         <div class="actions">
-          <%= f.submit "新規登録", class: :form__btn  %>
+          <%= f.submit "SIGN UP!", class: :form__btn  %>
         </div>
 
-        <div class="google_in">
-          <%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post%>
+        <div class="actions">
+          <%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post, class: :form__btn%>
         </div>
 
       <% end %>

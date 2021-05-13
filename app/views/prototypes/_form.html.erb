@@ -19,14 +19,20 @@
     <%= f.file_field :image, id:"prototype_image" %>
   </div>
 
-  ジャンル
-  <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
-  プラットフォーム
-  <%= f.collection_select(:platform_id, Platform.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
-  公開・非公開
-  <%= f.collection_select(:publish_id, Publish.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+  <div class="field">
+    <%= f.label :genre_id, "Genre" %><br />
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+  </div>
+  <div class="field">
+    <%= f.label :platform_id, "Platform" %><br />
+    <%= f.collection_select(:platform_id, Platform.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+  </div>
+  <div class="field">
+    <%= f.label :publish_id, "Publish" %><br />
+      <%= f.collection_select(:publish_id, Publish.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+  </div>
 
   <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
+    <%= f.submit "SAVE", class: :form__btn  %>
   </div>
 <% end %>
