@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :prototypes
   has_many :comments, dependent: :destroy
   has_many :sns_credentials
+  has_many :favos
 
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
