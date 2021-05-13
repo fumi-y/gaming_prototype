@@ -29,15 +29,25 @@
         </div>
       </div>
       <% if user_signed_in? %>
+        <% unless @prototype.favos %>
+          <%= form_with model: @favo, url: prototype_favos_path(@prototype.id), method: :post, scope: :favo do |favo| %>
+            <div class="field">
+              <%= favo.collection_select(:iine_id, Iine.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+            </div>
+            <div class="actions">
+              <%= favo.submit 'Favorite', class: :form__btn %>
+            </div>
+          <% end %>
+        <% end %>
       <div class="prototype__comments">
-          <%= form_with url:  "/prototypes/#{params[:prototype_id]}/comments", method: :post,id: "form" do |f| %>
-          <div class="field">
-            <%= f.text_field :comment, id:"comment_text" %>
-          </div>
-          <div class="actions">
-            <%= f.submit 'Comment' , id: "submit", class: :form__btn %>
-          </div>
-          <% end %> 
+        <%= form_with url:  "/prototypes/#{params[:prototype_id]}/comments", method: :post,id: "form" do |f| %>
+        <div class="field">
+          <%= f.text_field :comment, id:"comment_text" %>
+        </div>
+        <div class="actions">
+          <%= f.submit 'Comment' , id: "submit", class: :form__btn %>
+        </div>
+        <% end %> 
         <ul class="comments_lists">
           <div id="user" data-hoge-id="<%= current_user.nickname %>"></div>
           <div id="list"></div>
@@ -49,8 +59,8 @@
             </li>
           <% end %>
         </ul>
-      <% end %>
       </div>
+      <% end %>
     </div>
   </div>
 </main>

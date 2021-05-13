@@ -12,6 +12,7 @@ class PrototypesController < ApplicationController
   end
 
   def create
+    @favo = Favo.new
     @prototype = Prototype.new(prototype_params)
     if @prototype.save
       redirect_to root_path
@@ -21,7 +22,7 @@ class PrototypesController < ApplicationController
   end
 
   def show
-    # @comment = Comment.new
+    @favo = Favo.all
     @comments = @prototype.comments.order(id: "DESC")
   end
 
