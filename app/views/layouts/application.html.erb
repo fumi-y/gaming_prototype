@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
 
@@ -19,7 +19,7 @@
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
-              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: :nav__logout %>
+              <%= link_to "Log Out", destroy_user_session_path, method: :get, class: :nav__logout %>
               <%= link_to "New Proto", new_prototype_path, class: :nav__btn %>
             </div>
           <% else %>

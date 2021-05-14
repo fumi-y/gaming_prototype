@@ -2,7 +2,7 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの情報"%>
+        <%= "#{@user.nickname}"%>
       </h2>
       <table class="table">
         <tbody>
@@ -17,7 +17,6 @@
         </tbody>
       </table>
       <h2 class="page-heading">
-        <%= "#{@user.nickname}さんのプロトタイプ"%>
       </h2>
       <div class="user__card">
       <% @user.prototypes.each do |prototype| %>
